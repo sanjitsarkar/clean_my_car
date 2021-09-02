@@ -35,6 +35,7 @@ body {
 }
 
 .container .left {
+  position: relative;
   padding: 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -60,6 +61,28 @@ body {
 @media screen and (max-width: 700px) {
   .container .left img.logo {
     width: 30%;
+  }
+}
+
+.container .left::before {
+  z-index: -1;
+  padding: 0;
+  margin: 0;
+  background: #00ffaafa;
+  position: absolute;
+  content: "";
+  top: -2.5rem;
+  left: -4.2rem;
+  height: 100vh;
+  width: 125%;
+}
+
+@media screen and (max-width: 700px) {
+  .container .left::before {
+    top: -2.5rem;
+    left: -2.5rem;
+    width: 103vw;
+    height: 115%;
   }
 }
 
